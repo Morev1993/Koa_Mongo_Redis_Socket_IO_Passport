@@ -1,0 +1,21 @@
+doctype html
+html
+
+  head
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css")
+    link(rel="stylesheet" href="/style.css")       
+
+  body
+    .container
+      form(name ="login" action='/api/register' method='post')
+        h1 Регистрация
+        .form-group
+          label(for="name") Отображаемое имя
+          input.form-control(type="email" id="email" name="email" placeholder="my@mail.com" value="asd@asd.ru" required autofocus)
+        .form-group
+          label(for="email") email
+          input.form-control(type="password" id="password" name="password" value="123456" required)
+          label(for="password") Password
+          input.form-control(type="password" id="password" name="password" value="123456" required)        
+        button.btn Отправить
+       
