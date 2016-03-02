@@ -55,10 +55,10 @@ router.get('api/login', function*(){
 app.use(router.routes());
 
 var socket = require('./libs/socket');
-// var server = app.listen(port, ipaddress);
-var server = require('http').Server(app.callback());
-// socket(server);
-
+var server = app.listen(port, ipaddress);
+// var server = require('http').Server(app.callback());
 socket(server);
 
-server.listen(port,ipaddress)
+// socket(server);
+
+// server.listen(port,ipaddress)
