@@ -15,11 +15,10 @@ var sessionStore = require('./sessionStore');
 redisClient.auth(config.redis.password);
 function socket(server) {
   var io = socketIO(server);
-
-  console.log(redisClient);
+ 
   io.adapter(socketRedis(redisClient));
  
-  io.use(function(socket, next) {
+   io.use(function(socket, next) {
     var handshakeData = socket.request;
 
     var cookies = new Cookies(handshakeData, {}, config.keys);
