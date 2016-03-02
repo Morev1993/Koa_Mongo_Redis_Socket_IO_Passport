@@ -8,20 +8,16 @@ if (process.env.TRACE) {
   require('./libs/trace');
 }
 
-let port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
-let ipaddress = process.env.OPENSHIFT_NODEJS_IP; 
- 
- if (typeof ipaddress === "undefined") {
-            //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
-            //  allows us to run/test the app locally.
-            console.warn('No OPENSHIFT_NODEJS_IP var, using 127.0.0.1');
-            ipaddress = "127.0.0.1";
-        };
+const port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+let ipaddress = process.env.OPENSHIFT_NODEJS_IP;
 
+//console.log(port, ipaddress);
+
+var config = require('config');
 var koa = require('koa');
 var app = koa();
 
-var config = require('config');
+
 var mongoose = require('./libs/mongoose');
 
 // keys for in-koa KeyGrip cookie signing (used in session, maybe other modules)
@@ -52,14 +48,17 @@ router.get('/register', function*(){
 });
 router.get('/fb', require('./auth/facebook').fb);
 router.get('/vk', require('./auth/vk').vk);
-router.get('api/login', require('./routes/login').post)
+router.get('api/login', function*(){
+	console.log()
+});
 
 app.use(router.routes());
 
-
-
 var socket = require('./libs/socket');
+// var server = app.listen(port, ipaddress);
 var server = require('http').Server(app.callback());
+// socket(server);
+
 socket(server);
 
 server.listen(port,ipaddress)

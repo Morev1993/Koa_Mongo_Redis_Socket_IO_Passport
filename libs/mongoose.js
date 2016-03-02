@@ -6,7 +6,7 @@
  * In tests: in mocha.opts
  * In gulpfile: in beginning
  */
-
+'use strict'
 var mongoose = require('mongoose');
 var config = require('config');
 
@@ -15,5 +15,7 @@ if (process.env.MONGOOSE_DEBUG) {
 }
 
 mongoose.connect(config.mongoose.uri, config.mongoose.options);
+
+console.log(`mongoose URI:${config.mongoose.uri}, mongoose options:${config.mongoose.options}`);
 
 module.exports = mongoose;
