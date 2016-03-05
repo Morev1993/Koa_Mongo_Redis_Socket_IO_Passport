@@ -5,19 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
-  },
-   "repository": {
-    "type": "git",
-    "url": "https://github.com/openshift/origin-server"
-  },
-  "author": {
-    "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url": "http://www.openshift.com/"
-  },
+  }, 
   "author": "",
   "license": "ISC",
-  "homepage": "http://www.openshift.com/",
   "engines": {
     "node": ">= 0.6.0",
     "npm": ">= 1.0.0"
