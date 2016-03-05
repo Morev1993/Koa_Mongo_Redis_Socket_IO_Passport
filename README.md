@@ -11,6 +11,7 @@ Technology:
 -Mongoose
 -Redis
 -Websocket (socket.io)
+-gulp: [ fixtures, nodemon ]
 
 
 Passport authorization: 
@@ -18,5 +19,9 @@ Passport authorization:
  used Mongodb+Mongoose, also has email, password validation
 - VK, facebook
 *********
+
+Instead you connect you should add fixtures for testing:
+run in console:
+gulp load:db --from /fixtures/users
 
 After login you enter to chat server, which is running on Redis + socket.io
