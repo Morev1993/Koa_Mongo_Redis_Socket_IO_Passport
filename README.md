@@ -4,14 +4,14 @@
 Node.js, chat server
 
 Technology:
--Jade
--Bootstrap
--MongoDB
--Passport
--Mongoose
--Redis
--Websocket (socket.io)
--gulp: [ fixtures, nodemon ]
+Jade,
+Bootstrap,
+MongoDB,
+Passport,
+Mongoose,
+Redis,
+Websocket (socket.io),
+gulp: [ fixtures, nodemon ],
 
 
 Passport authorization: 
