@@ -16,7 +16,7 @@ gulp: [ fixtures, nodemon ],
 
 Passport authorization: 
 - Local:
- used Mongodb+Mongoose, also has email, password validation
+ used Mongodb+Mongoose, password validation
 - VK, facebook
 *********
 
