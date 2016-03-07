@@ -4,12 +4,12 @@ require('../models/user');
 
 exports.User = [{
   _id:         oid('user-mk'),
-  displayName: "user 1",
-  email:       "mk@javascript.ru",
+  displayName: "Oleg",
+  email:       "oleglustenko@gmail.com",
   password:    "123456"
 }, {
   _id:         oid('user-iliakan'),
-  displayName: "user 2",
-  email:       "iliakan@javascript.ru",
+  displayName: "Lustenko",
+  email:       "lustenko@gmail.com",
   password:    "123456"
 }];

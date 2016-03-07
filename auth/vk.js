@@ -6,8 +6,8 @@ let passport = require('koa-passport');
 exports.vk = function*(next){
 
 	passport.use(new vkStrategy({
-		clientID: '5287048',
-		clientSecret: 'hXcDNqDEBE1GJxTSE7Ug',
+		clientID: '%ID%',
+		clientSecret: '%secret%',
 		callbackURL: 'http://localhost:' + (process.env.PORT || 3000) + '/'
 	}, function(token, tokenSecret, profile, done) {
 		console.log(token);
