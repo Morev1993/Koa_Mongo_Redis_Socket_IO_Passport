@@ -1,27 +1,20 @@
-# Koa_Mongo_Redis_Socket_IO_Passport
-
+# Node.JS + Koa.js REST-API template server
 
 Node.js, chat server
 
-Technology:
-Jade,
-Bootstrap,
-MongoDB,
-Passport,
-Mongoose,
-Redis,
-Websocket (socket.io),
-gulp: [ fixtures, nodemon ],
+> Technology:
+* Jade,
+* MongoDB,
+* Passport,
+* Mongoose,
+* Redis,
+* Websocket (socket.io),
+* gulp
 
+Social authorization - need keys
 
-Passport authorization: 
-- Local:
- used Mongodb+Mongoose, password validation
-- VK, facebook
-*********
-
-Instead you connect you should add fixtures for testing:
+>Instead you connect you should add fixtures for testing:
 run in console:
 "gulp load:db --from /fixtures/users"
 
-After login you enter to chat server, which is running on Redis + socket.io
+>> After login you enter to chat server, which is running on Redis + socket.io
